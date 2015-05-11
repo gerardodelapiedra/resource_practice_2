@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     @movie.duration = params[:the_duration]
     @movie.description = params[:the_description]
     @movie.image_url = params[:the_image_url]
-    @movie.director_id = params[:the_director_id]
+    @movie.director_id = params[:director_id]
 
     @movie.save
 
@@ -43,7 +43,6 @@ class MoviesController < ApplicationController
 
   def destroy
     @movie = Movie.find(params[:id])
-
     @movie.destroy
   end
 end

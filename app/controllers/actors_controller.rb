@@ -4,7 +4,7 @@ class ActorsController < ApplicationController
   end
 
   def show
-    @actor = Actor.find(params[id])
+    @actor = Actor.find(params[:id])
   end
 
   def new_form
@@ -41,7 +41,6 @@ class ActorsController < ApplicationController
 
   def destroy
     @actor = Actor.find(params[:id])
-
     @actor.destroy
   end
 end
